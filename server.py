@@ -3,6 +3,8 @@ import requests
 import os
 
 app = Flask(__name__)
+
+# API-Key aus Umgebungsvariable
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Projekt-ID aus deinem Schlüssel extrahiert
@@ -32,3 +34,4 @@ def frage_an_gpt(frage):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
